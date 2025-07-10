@@ -1,0 +1,29 @@
+/* 基础重置 */
+html, body, * { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* 背景与基础设置 */
+html, body { overflow-x: hidden; width: 100%; background-color: white; }
+
+/* 主容器 - 单一居中机制 */
+.App { min-height: 100vh; display: flex; justify-content: center; align-items: center; position: relative; padding: 20px; }
+
+/* 液态玻璃窗口样式 */
+.liquid-glass-container {
+  max-width: 500px;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto !important; /* 强制水平居中 */
+  display: block !important; /* 确保为块级元素 */
+  float: none !important; /* 清除可能的浮动 */
+  transform: none !important; /* 清除可能的位移 */
+}
+
+/* 窗口内容容器 */
+.glass-content { width: 100%; min-height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 1rem; }
+
+/* 文本样式 */
+.glass-title { margin-bottom: 1rem; }
+.glass-content p { margin: 0.5rem 0; word-wrap: break-word; }
+
+/* 背景动画Canvas */
+.canvas-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
