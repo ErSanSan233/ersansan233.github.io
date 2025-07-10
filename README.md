@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# 液态玻璃效果个人主页
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+一个具有视觉吸引力的个人主页，带有动态背景动画。
 
-## Available Scripts
+## 页面内容介绍
 
-In the project directory, you can run:
+### 主页窗口
+- **标题**：ErSanSan233
+- **段落文本**：居中显示的介绍文字
+- **特殊效果**：半透明液态玻璃效果，带有圆角和模糊边框
+- **布局**：水平垂直居中的响应式设计
 
-### `npm start`
+### 背景动画
+- 随机飘动的正方形色块，颜色为 #E6A235 和 #E4E4E4
+- 色块具有随机大小(10-50px)和旋转效果
+- 无限循环的平滑动画效果
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 部署到GitHub Pages
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 前提条件
+- Node.js 和 npm 已安装
+- GitHub账号和仓库
 
-### `npm test`
+### 部署步骤
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. 安装部署依赖
+```bash
+npm install --save-dev gh-pages
+```
 
-### `npm run build`
+2. 修改package.json
+添加以下内容到package.json文件：
+```json
+"homepage": "https://ersansan233.github.io/",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. 执行部署命令
+```bash
+npm run deploy
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. 访问网站
+部署完成后，通过以下链接访问：
+https://ersansan233.github.io/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 技术栈
+- React
+- CSS (Glassmorphism效果)
+- Canvas API (背景动画)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+液态玻璃效果借助https://github.com/rdev/liquid-glass-react 实现。
